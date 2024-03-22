@@ -30,6 +30,14 @@ class LeagueSimulation:
     def load_schedule(self, filename):
         with open(filename, 'r') as file:
             for line in file:
+            #     match_data = line.strip().split()
+            #     if len(match_data) > 2:
+            #         team1 = match_data[0]
+            #         team2 = match_data[1]
+            #         team1_score, team2_score = map(int, match_data[2].split(':'))
+            #         self.standings[team1]['win_race'] = (team1_score > team2_score)
+            #         self.standings[team1]['lose_race'] = (team1_score < team2_score)
+            #         self.standings[team1]['win_match'] =  
                 race = line.strip().split()
                 self.schedule.append(race)
         
