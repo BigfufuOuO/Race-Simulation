@@ -13,11 +13,11 @@ if __name__ == "__main__":
             else:
                 ranking_counts[i][team] = count
 
-    with open(r'result\total_result.txt', 'w') as file:
+    with open(r'total_result.txt', 'w') as file:
         for scenario, count in sorted(top_10_scenarios.items(), key=lambda x: x[1], reverse=True):
                 file.write(f"{', '.join(scenario)}: {count}\n")
     
-    with open(r'result\team_result.txt', 'w') as file:
+    with open(r'team_result.txt', 'w') as file:
         for position, teams in ranking_counts.items():
             file.write(f"Position {position}: \n")
             for team, count in teams.items():
