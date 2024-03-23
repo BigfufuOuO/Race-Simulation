@@ -12,7 +12,7 @@
 ## 文件及使用
 ### 文件说明
 #### data文件夹
-data文件夹中包含了所需的积分版和赛程信息。已实现从https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki中自动获取赛事信息。
+data文件夹中包含了所需的积分版和赛程信息。已实现从 https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki 中自动获取赛事信息。
 - data\LeaguePedia_Schedule.py 用于抓取赛程。
 - data\LeaguePedia_Standings.py 用于抓取积分榜。
 
