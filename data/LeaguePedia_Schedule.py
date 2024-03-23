@@ -36,7 +36,5 @@ class LeaguePedia_Schedule:
                 row_str = "\t|".join(row) 
                 file.write(row_str + "\n")
 
-def scape_LPL_schedule():
-    LPL = LeaguePedia_Schedule("https://lol.fandom.com/wiki/LPL/2024_Season/Spring_Season", r'data\shcedule.txt')
-    LPL.scape_schedule()
+
 

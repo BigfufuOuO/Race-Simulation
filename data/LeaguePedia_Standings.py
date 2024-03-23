@@ -57,9 +57,7 @@ class LeaguePeida_Standings:
                     mapped_data = mapping_LPL[line[i]]
                     line[i] = mapped_data
 
-def scrap_LPL_standings():
-    LPL = LeaguePeida_Standings("https://lol.fandom.com/wiki/LPL/2024_Season/Spring_Season", r'data\standings.txt')
-    LPL.scrape_standings()
+
 
     
     
