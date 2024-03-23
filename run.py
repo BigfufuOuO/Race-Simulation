@@ -1,8 +1,11 @@
 from Simulator import LeagueSimulation 
+
 nums_simulation = 100000
 
 if __name__ == "__main__":
-    league_sim = LeagueSimulation(r'data\teams_ranking20240322.txt', r'data\race_schedule.txt')
+
+    league_sim = LeagueSimulation("https://lol.fandom.com/wiki/LPL/2024_Season/Spring_Season",
+                                  "https://lol.fandom.com/wiki/LPL/2024_Season/Spring_Season")
     top_10_scenarios = league_sim.simulation_season(nums_simulation, True)
 
     ranking_counts = {i: {} for i in range(1, 11)} 

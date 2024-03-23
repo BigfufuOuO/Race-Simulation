@@ -1,54 +1,54 @@
 Position 1: 
 	 BLG: 100.00%
 Position 2: 
-	 TES: 51.09%
-	 JDG: 47.85%
-	 NIP: 1.06%
+	 JDG: 48.16%
+	 TES: 50.80%
+	 NIP: 1.04%
 Position 3: 
-	 JDG: 49.78%
-	 TES: 43.36%
-	 NIP: 6.86%
+	 TES: 43.58%
+	 JDG: 49.44%
+	 NIP: 6.98%
 Position 4: 
-	 NIP: 69.75%
-	 TES: 5.55%
-	 FPX: 22.04%
-	 JDG: 2.37%
-	 IG: 0.29%
+	 NIP: 69.58%
+	 TES: 5.62%
+	 FPX: 22.11%
+	 JDG: 2.41%
+	 iG: 0.28%
 Position 5: 
-	 IG: 5.37%
-	 FPX: 72.77%
-	 NIP: 21.86%
+	 FPX: 72.62%
+	 NIP: 21.93%
+	 iG: 5.45%
 Position 6: 
-	 FPX: 5.18%
-	 IG: 48.41%
-	 WE: 13.81%
-	 LNG: 28.80%
-	 WBG: 3.33%
-	 NIP: 0.47%
+	 iG: 48.33%
+	 LNG: 28.96%
+	 WE: 13.68%
+	 FPX: 5.27%
+	 WBG: 3.30%
+	 NIP: 0.46%
 Position 7: 
-	 LNG: 32.41%
-	 IG: 23.64%
-	 WE: 23.03%
-	 WBG: 20.21%
-	 OMG: 0.70%
+	 LNG: 32.61%
+	 iG: 23.80%
+	 WE: 22.77%
+	 WBG: 20.09%
+	 OMG: 0.74%
 Position 8: 
-	 WBG: 25.62%
-	 LNG: 23.15%
-	 WE: 23.02%
-	 OMG: 17.89%
-	 AL: 2.49%
-	 IG: 7.83%
+	 WE: 23.21%
+	 WBG: 25.52%
+	 LNG: 23.00%
+	 iG: 7.80%
+	 OMG: 17.92%
+	 AL: 2.55%
 Position 9: 
-	 WE: 24.32%
-	 WBG: 24.88%
-	 OMG: 22.70%
-	 AL: 10.43%
-	 LNG: 8.73%
-	 IG: 8.94%
+	 WBG: 24.60%
+	 WE: 24.35%
+	 OMG: 23.16%
+	 LNG: 8.56%
+	 AL: 10.51%
+	 iG: 8.82%
 Position 10: 
-	 OMG: 43.55%
-	 AL: 12.16%
-	 IG: 5.51%
-	 LNG: 5.52%
-	 WBG: 20.72%
-	 WE: 12.53%
+	 OMG: 43.07%
+	 AL: 12.27%
+	 WBG: 21.04%
+	 iG: 5.52%
+	 LNG: 5.48%
+	 WE: 12.63%

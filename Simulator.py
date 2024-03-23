@@ -1,45 +1,45 @@
 import random
+from data.LeaguePedia_Schedule import LeaguePedia_Schedule
+from data.LeaguePedia_Standings import LeaguePeida_Standings
 
 # define cace format (default = 3g2w)
 format = 2
 
-class LeagueSimulation:
-    def __init__(self, team_standings_filename, race_schedule_filename):
+class LeagueSimulation(LeaguePeida_Standings, LeaguePedia_Schedule):
+    def __init__(self, url_standings, url_schedule, area="LPL"):
         self.teams = set()
         self.standings = {}
         self.schedule = []
         self.winrate = {}
-        self.standings_filename = team_standings_filename
-        self.schedule_filename = race_schedule_filename
-         
-    # load race standings and race schedule here
-    def load_standings(self, filename):
-        with open(filename, 'r') as file:
-            for line in file:
-                team_data = line.strip().split()
-                team = team_data[0]
-                self.teams.add(team)
-                win_race, loss_race = map(int, team_data[1].split('/'))
-                win_match, loss_match = map(int, team_data[2].split('-'))
-                self.standings[team] = {"win_race": win_race, 
-                                "loss_race": loss_race,
-                                "win_match": win_match,
-                                "loss_match": loss_match}
-                self.winrate[team] = win_match / (loss_match + win_match)
+        self.standings_raw = []
+        self.schedule_raw = []
+        self.url_schedule = url_schedule
+        self.url_standings = url_standings
+        # initialize data
+        self.scrape_standings()
+        self.standings_data_processor(area)
+        self.standings_data_output()
+        self.scape_schedule()
+        self.schedule_data_output()
+        
 
-    def load_schedule(self, filename):
-        with open(filename, 'r') as file:
-            for line in file:
-            #     match_data = line.strip().split()
-            #     if len(match_data) > 2:
-            #         team1 = match_data[0]
-            #         team2 = match_data[1]
-            #         team1_score, team2_score = map(int, match_data[2].split(':'))
-            #         self.standings[team1]['win_race'] = (team1_score > team2_score)
-            #         self.standings[team1]['lose_race'] = (team1_score < team2_score)
-            #         self.standings[team1]['win_match'] =  
-                race = line.strip().split()
-                self.schedule.append(race)
+    # load race standings and race schedule here
+    def load_standings(self):
+        for line in self.standings_raw:
+            team = line[1]
+            self.teams.add(team)
+            win_race, loss_race = map(int, line[2].split('-'))
+            win_match, loss_match = map(int, line[4].split('-'))
+            self.standings[team] = {"win_race": win_race, 
+                            "loss_race": loss_race,
+                            "win_match": win_match,
+                            "loss_match": loss_match}
+            self.winrate[team] = win_match / (loss_match + win_match)
+
+    def load_schedule(self):
+        for line in self.schedule_raw:
+            race = [line[0], line[2]]
+            self.schedule.append(race)
         
 
     # define simulation function
@@ -86,12 +86,12 @@ class LeagueSimulation:
     def simulation_season(self, nums_simulation, output_standings=False):
         top_10_scenarios = {} 
         for _ in range(nums_simulation):
-            self.teams = set()
+            # self.teams = set()
             self.standings = {}
             self.schedule = []
             self.winrate = {}
-            self.load_standings(self.standings_filename)
-            self.load_schedule(self.schedule_filename)
+            self.load_standings()
+            self.load_schedule()
             for race in self.schedule:
                 self.simulation_simple_race(race)
             top_10 = tuple(self.get_top_10())
